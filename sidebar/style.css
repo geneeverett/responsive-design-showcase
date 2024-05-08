@@ -1,0 +1,51 @@
+.sidebar {
+	background-color: white;
+	width: 200px;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	position: relative;
+	height: 100%;
+}
+
+.sidebar a {
+	display: block;
+	color: black;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.sidebar a.active {
+	background-color: lightgrey;
+	color: black;
+}
+
+.sidebar a:hover:not(.active) {
+	background-color: lightgrey;
+	color: black;
+}
+
+div.content {
+	margin-left: 200px;
+	padding: 1px 20px;
+	height: 1000px;
+}
+
+/* For screen sizes less than 700px wide, this makes the sidebar into a topbar. */
+@media screen and (max-width: 700px) {
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	.sidebar a {float: left;}
+	div.content {margin-left: 0;}
+}
+
+/* On screen sizes less than 400px, this displays the bar vertically instead of horizontally. */
+@media screen and (max-width: 400px) {
+	.sidebar a {
+		float: none;
+		text-align: none;
+	}
+}
